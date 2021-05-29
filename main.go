@@ -1,19 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"os"
 
-	"Starter/src/api"
+	"Starter/routes"
 	"Starter/src/middlewares"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
-)
-
-var (
-	router = gin.Default()
 )
 
 func init() {
@@ -25,11 +19,8 @@ func main() {
 	if err != nil {
 		log.Fatal("Error loading .env file")
 	}
+	router := gin.Default()
+	routes.Routes(router)
 
-	fmt.Println(os.Getenv("PORT"))
-
-	router.POST("/login", api.Login)
-	router.POST("/api/todo", middlewares.Authorize(), api.CreateTodo)
-	router.POST("/todo", api.CreateTodo)
 	log.Fatal(router.Run(":8080"))
 }
