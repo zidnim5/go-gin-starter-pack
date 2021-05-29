@@ -1,5 +1,12 @@
-#go-gin framework starter pack
+<img src="icon.png" align="right" />
+
+# go-gin framework starter pack [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome#readme)
+> A curated list of awesome READMEs
 
 this package includes
-1. routing
-2. authorization (JWT)
+## Examples
+
+## Examples
+- Redis (  Remote Dictionary Server )
+- Separate routing file
+- Login Authorization ( JWT ) 
