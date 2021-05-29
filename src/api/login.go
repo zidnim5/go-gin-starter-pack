@@ -1,7 +1,6 @@
 package api
 
 import (
-	"fmt"
 	"net/http"
 
 	"Starter/src/middlewares"
@@ -29,7 +28,7 @@ func Login(c *gin.Context) {
 		return
 	}
 	ts, err := middlewares.CreateToken(user.ID)
-	fmt.Println(ts.RefreshUuid)
+
 	if err != nil {
 		c.JSON(http.StatusUnprocessableEntity, err.Error())
 		return

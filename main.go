@@ -29,5 +29,7 @@ func main() {
 	fmt.Println(os.Getenv("PORT"))
 
 	router.POST("/login", api.Login)
+	router.POST("/api/todo", middlewares.Authorize(), api.CreateTodo)
+	router.POST("/todo", api.CreateTodo)
 	log.Fatal(router.Run(":8080"))
 }
