@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 
+	"Starter/databases"
 	"Starter/routes"
 	"Starter/src/middlewares"
 
@@ -15,6 +16,10 @@ func init() {
 }
 
 func main() {
+	// migrating DB ["", "migrate", "drop"]
+	db := databases.MigrationDB("")
+	_ = db
+
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal("Error loading .env file")

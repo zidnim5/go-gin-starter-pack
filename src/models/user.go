@@ -1,7 +1,10 @@
 package models
 
 type User struct {
-	ID       uint64 `json:"id"`
-	Username string `json:"username"`
-	Password string `json:"password"`
+	Username string
+	Password string
+}
+
+func (user *User) TableName() string {
+	return "user"
 }
