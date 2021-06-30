@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"Starter/src/models"
+	"Starter/pkg/models"
 
 	"github.com/gin-gonic/gin"
 )

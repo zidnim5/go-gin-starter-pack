@@ -3,21 +3,21 @@ package api
 import (
 	"net/http"
 
-	"Starter/src/middlewares"
-	"Starter/src/models"
+	"Starter/pkg/entities"
+	"Starter/pkg/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
 
 //A sample use
-var user = models.User{
+var user = entities.User{
 	ID:       1,
 	Username: "username",
 	Password: "password",
 }
 
 func Login(c *gin.Context) {
-	var u models.User
+	var u entities.User
 	if err := c.ShouldBindJSON(&u); err != nil {
 		c.JSON(http.StatusUnprocessableEntity, "Invalid json provided")
 		return

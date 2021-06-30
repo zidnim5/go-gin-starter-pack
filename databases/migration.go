@@ -2,7 +2,7 @@ package databases
 
 import (
 	"Starter/config"
-	"Starter/src/entities"
+	"Starter/pkg/entities"
 )
 
 func MigrationDB(Status string) string {
