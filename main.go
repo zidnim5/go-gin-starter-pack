@@ -1,9 +1,7 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"os"
 
 	"Starter/databases"
 	"Starter/pkg/middlewares"
@@ -27,7 +25,6 @@ func main() {
 	db := databases.MigrationDB("")
 	_ = db
 
-	fmt.Println(os.Getenv("DB_NAME"))
 	router := gin.Default()
 	routes.Routes(router)
 
