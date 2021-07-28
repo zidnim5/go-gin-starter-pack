@@ -3,16 +3,20 @@ package main
 import (
 	"log"
 
-	"Starter/databases"
-	"Starter/pkg/middlewares"
-	"Starter/routes"
+	"Starter/config"
+	// "Starter/pkg/middlewares"
+	"Starter/pkg/routes"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
 
 func init() {
-	middlewares.Start()
+	// middlewares.Start()
+}
+
+func SetupRoutes() {
+	main()
 }
 
 func main() {
@@ -22,7 +26,7 @@ func main() {
 	}
 
 	// migrating DB ["", "migrate", "drop"]
-	db := databases.MigrationDB("")
+	db := config.MigrationDB("")
 	_ = db
 
 	router := gin.Default()

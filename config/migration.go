@@ -1,13 +1,12 @@
-package databases
+package config
 
 import (
-	"Starter/config"
 	"Starter/pkg/entities"
 )
 
 func MigrationDB(Status string) string {
 	// connect to db
-	config.ConnectDB()
+	// ConnectDB()
 	// TODO: migrating db || dropping db
 	if Status == "migrate" {
 		migrateDB()
@@ -21,9 +20,9 @@ func MigrationDB(Status string) string {
 }
 
 func migrateDB() {
-	config.DB.AutoMigrate(entities.User{}, entities.Todo{})
+	DB.AutoMigrate(entities.User{}, entities.Todo{})
 }
 
 func dropTable() {
-	config.DB.DropTable(entities.User{}, entities.Todo{})
+	DB.DropTable(entities.User{}, entities.Todo{})
 }
