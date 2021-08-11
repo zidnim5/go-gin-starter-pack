@@ -5,6 +5,7 @@ import (
 
 	"Starter/config"
 	// "Starter/pkg/middlewares"
+	"Starter/pkg/middlewares"
 	"Starter/pkg/routes"
 
 	"github.com/gin-gonic/gin"
@@ -12,7 +13,7 @@ import (
 )
 
 func init() {
-	// middlewares.Start()
+	middlewares.Start()
 }
 
 func SetupRoutes() {

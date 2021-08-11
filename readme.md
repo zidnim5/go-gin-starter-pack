@@ -6,9 +6,10 @@
 
 ## Includes
 
-- Redis ( Remote Dictionary Server )
-- Separate routing file
 - Login Authorization ( JWT )
+- Separate routing file
+- Redis ( Remote Dictionary Server )
+- RabbitMQ ( Message Broker )
 - Unit Testing
 
 ## Unit Testing

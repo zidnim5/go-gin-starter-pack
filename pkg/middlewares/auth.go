@@ -37,12 +37,12 @@ func Start() error {
 		dsn = "localhost:6379"
 	}
 	client = redis.NewClient(&redis.Options{
-		Addr: dsn, //redis port
+		Addr: dsn,
 	})
 	_, err := client.Ping().Result()
 
 	if err != nil {
-		panic(err)
+		fmt.Println("Running without redis")
 	}
 	return nil
 }
