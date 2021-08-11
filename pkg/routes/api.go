@@ -25,8 +25,4 @@ func Routes(route *gin.Engine) {
 	route.GET("/api/todo/:id", controllers.GetTodoId)
 	route.DELETE("/api/todo/:id", controllers.DeleteTodo)
 	route.PATCH("/api/todo/:id", controllers.UpdateTodo)
-	route.POST("/api/product", controllers.CreateProduct)
-
-	// api/product/product-1
-	route.PATCH("/api/product/:slug", controllers.UpdateProduct)
 }
