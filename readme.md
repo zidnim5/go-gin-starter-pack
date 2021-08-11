@@ -10,6 +10,7 @@
 - Separate routing file
 - Redis ( Remote Dictionary Server )
 - RabbitMQ ( Message Broker )
+- Support Database ( MySQL & PostgreSQL )
 - Unit Testing
 
 ## Unit Testing
